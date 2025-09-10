@@ -3,6 +3,14 @@
   padding: 0;
 }
 
+summary {
+  display: block;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
 body {
   font-family: "Lato", sans-serif;
 }
@@ -51,8 +59,34 @@ a {
   line-height: 17px;
   color: #000;
 }
-.filter__content {
+.filter__item {
   margin-top: 16px;
+}
+.filter__link-box {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  padding: 24px 16px;
+}
+.filter__link {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #6F6E6E;
+}
+.filter__head {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #6F6E6E;
+  padding: 8px 11px 11px 11px;
+  border-bottom: 1px solid #ebebeb;
+  border-left: 5px solid #c4001a;
+}
+.filter__item[open] .filter__head {
+  color: #c4001a;
 }
 
 .header {
