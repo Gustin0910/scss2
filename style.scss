@@ -1,0 +1,162 @@
+@import 'vars';
+@import 'mixins';
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.center {
+    padding-left: calc(50% - $widthSite / 2);
+    padding-right: calc(50% - $widthSite / 2);
+}
+
+.filter-sort {
+    height: 132px;
+    position: relative;
+    z-index: 5;
+}
+
+.filter {
+    padding: 13px 16px;
+    width: 360px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 39px;
+    
+
+    &[open] {
+        background: #FFFFFF;
+        box-shadow: 6px 4px 35px
+        rgba(0, 0, 0, 0.21);
+    }
+
+    &[open] .filter__heading{
+        color: $colorSelectSite;
+    }
+
+    &[open] path {
+        fill: $colorSelectSite;
+    }
+
+    &__summary {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+    }
+
+    &__heading {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+        color: $colorText;
+    }
+
+    &__content {
+        margin-top: 16px;
+    }
+
+}
+
+    .header {
+        background-color: $blackBlock;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        &__left {
+            display: flex;
+            align-items: center;
+            gap: 41px;
+        }
+
+    }
+
+
+    .top-head {
+        background: #F8F3F4;
+        padding-top: 60px;
+        padding-bottom: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &_heading {
+            color: $colorSelectSite;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 29px;
+        }
+
+    }
+
+    .bredcrumbs__link {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 17px;
+        color: #636363;
+    }
+
+    .bredcrumbs__link_site {
+        font-weight: 700;
+        color: $colorSelectSite;
+    }
+
+    .product-box {
+        @include centerflex();
+        gap: $gapGrid;
+    }
+
+
+    .product {
+        width: 360px;
+        display: flex;
+        flex-direction: column;
+
+        &__img {
+            width: 100%;
+        }
+
+        &__content {
+            background-color: #F8F8F8;
+            padding: 24px 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        &__name {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 16px;
+            color: $colorText;
+        }
+
+        &__text {
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 17px;
+            color: #5D5D5D;
+        }
+
+        &__price {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            color: $colorSelectSite;
+        }
+    }
